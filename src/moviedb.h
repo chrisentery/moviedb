@@ -28,7 +28,7 @@
 #define   FSEP                    '|'
 #define   MAXZCATARGS              10
 #define   MAXLSEEN              65534
-#define   MAXTITLES            2000000
+#define   MAXTITLES            3000000
 #define   MAXFILMOGRAPHIES       40470
 #define   MAXWITHATTRS           4095
 #define   MAXTITLERESULTS       16383
@@ -56,9 +56,9 @@
 /* (under-)Estimate of movie ratings average line; assumes 1-letter titles */
 #define   MRRSIZE                  41
 /* Following constants used only by mkdb (hence, more easily programmed out) */
-#define   MAXNAKAENTRIES       700000
+#define   MAXNAKAENTRIES       1000000
 #define   MAXTITLEINFO         500000
-#define   MAXBIOENTRIES        500000
+#define   MAXBIOENTRIES        1000000
 
 #ifndef DBDIR
 #define   DBDIR

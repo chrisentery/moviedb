@@ -72,11 +72,11 @@ LFETCHOPT = -auto -user userid@machine.domain
 
 # Your C Compiler
 # NOTE: must be ANSI compatible, use gcc if your standard compiler isn't!
-#CC = gcc
-CC = cc
+CC = gcc
+#CC = cc
 
 # C flags
-CFLAGS = -O -DCOMPRESS
+CFLAGS = -O -DCOMPRESS -W1,-stack_size -W1,40000000 -W1,-stack_addr -W1,f00000000
 
 # Linker
 LD = $(CC)
@@ -114,12 +114,12 @@ LDFLAGS = $(CFLAGS)
 # definition COMPRESS from the CFLAGS variable
 
 ZLISTEXT = .gz
-ZLISTCAT = /bin/gzip
+ZLISTCAT = /usr/bin/gzip
 ZLISTCATOPTS = -cd
 
 ZDBSCOMPRESS = gzip
 ZDBSEXT = .gz
-ZDBSCAT = /bin/gzip
+ZDBSCAT = /usr/bin/gzip
 ZDBSCATOPTS = -cd
 
 
@@ -181,7 +181,7 @@ DOCDIR = `pwd`/docs/
 # of the movie database programs. Probably only useful on a multi-user system.
 
 LOGFILENAME = /tmp/.imdb_log
-LOGFILE = 0 # 1 for logging
+LOGFILE = 1 # 1 for logging
 
 # --------------------------------------------------------------------------
 #
